@@ -6,34 +6,23 @@
 
 std::map<int, int> Input::keys = {
 	// arrow keys
-	{SDLK_DOWN,   blit::Button::DPAD_DOWN},
-	{SDLK_UP,     blit::Button::DPAD_UP},
-	{SDLK_LEFT,   blit::Button::DPAD_LEFT},
-	{SDLK_RIGHT,  blit::Button::DPAD_RIGHT},
-
-	// wasd
-	{SDLK_w,       blit::Button::DPAD_UP},
-	{SDLK_a,       blit::Button::DPAD_LEFT},
-	{SDLK_s,       blit::Button::DPAD_DOWN},
-	{SDLK_d,       blit::Button::DPAD_RIGHT},
+	{SDLK_d,   blit::Button::DPAD_DOWN},
+	{SDLK_u,     blit::Button::DPAD_UP},
+	{SDLK_l,   blit::Button::DPAD_LEFT},
+	{SDLK_r,  blit::Button::DPAD_RIGHT},
 
 	// action buttons
-	{SDLK_z,       blit::Button::A},
-	{SDLK_x,       blit::Button::B},
-	{SDLK_c,       blit::Button::X},
-	{SDLK_v,       blit::Button::Y},
-
-	{SDLK_u,       blit::Button::A},
-	{SDLK_i,       blit::Button::B},
-	{SDLK_o,       blit::Button::X},
-	{SDLK_p,       blit::Button::Y},
+	{SDLK_a,       blit::Button::A},
+	{SDLK_b,       blit::Button::B},
+	{SDLK_x,       blit::Button::X},
+	{SDLK_y,       blit::Button::Y},
 
 	// system buttons
-	{SDLK_1,       blit::Button::HOME},
-	{SDLK_2,       blit::Button::MENU},
+	{SDLK_m,       blit::Button::HOME},
+	{SDLK_n,       blit::Button::MENU},
 	{SDLK_3,       blit::Button::JOYSTICK},
 
-  {SDLK_ESCAPE,  blit::Button::MENU},
+  {SDLK_q,  blit::Button::MENU},
 };
 
 std::map<int, int> Input::buttons = {
