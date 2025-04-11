@@ -235,7 +235,7 @@ int main(int argc, char *argv[]) {
 	window = SDL_CreateWindow(
 		metadata_title,
 		x, y,
-		System::width*2, System::height*2,
+		System::width, System::height,
 		SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI | (fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0)
 	);
 
