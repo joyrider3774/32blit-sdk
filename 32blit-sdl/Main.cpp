@@ -63,7 +63,7 @@ void handle_event(SDL_Event &event) {
 			break;
 
 		case SDL_KEYDOWN: // fall-though
-            if (event.key.keysym.sym == SDLK_HOME) {
+            if (event.key.keysym.sym == SDLK_q) {
                 running = false;
                 break;
             }
