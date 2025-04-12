@@ -63,6 +63,10 @@ void handle_event(SDL_Event &event) {
 			break;
 
 		case SDL_KEYDOWN: // fall-though
+            if (event.key.keysym.sym == SDLK_HOME) {
+                running = false;
+                break;
+            }
 		case SDL_KEYUP:
 			if (!blit_input->handle_keyboard(event.key.keysym.sym, event.type == SDL_KEYDOWN)) {
 #ifdef VIDEO_CAPTURE

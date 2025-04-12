@@ -18,11 +18,11 @@ std::map<int, int> Input::keys = {
 	{SDLK_y,       blit::Button::Y},
 
 	// system buttons
-	{SDLK_m,       blit::Button::HOME},
+	{SDLK_q,       blit::Button::HOME},
 	{SDLK_n,       blit::Button::MENU},
 	{SDLK_3,       blit::Button::JOYSTICK},
 
-  {SDLK_q,  blit::Button::MENU},
+  {SDLK_ESCAPE,  blit::Button::MENU},
 };
 
 std::map<int, int> Input::buttons = {
