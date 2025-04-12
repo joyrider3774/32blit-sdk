@@ -20,7 +20,7 @@ class Renderer {
 		int win_width, win_height;
 
     bool is_lores = false;
-		Mode mode = KeepPixels;
+		Mode mode = KeepAspect;
 		SDL_Renderer *renderer = nullptr;
 
 		SDL_Texture *fb_texture = nullptr;

@@ -79,6 +79,11 @@ void handle_event(SDL_Event &event) {
 			break;
 
 		case SDL_CONTROLLERBUTTONDOWN:
+			if(event.cbutton.button == SDL_CONTROLLER_BUTTON_BACK)
+			{
+				running = false;
+				break;
+			}
 		case SDL_CONTROLLERBUTTONUP:
 			blit_input->handle_controller_button(event.cbutton.button, event.type == SDL_CONTROLLERBUTTONDOWN);
 			break;
@@ -236,7 +241,7 @@ int main(int argc, char *argv[]) {
 		metadata_title,
 		x, y,
 		System::width*2, System::height*2,
-		SDL_WINDOW_OPENGL | SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI | (fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0)
+		SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | (fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0)
 	);
 
 	if (window == nullptr) {
