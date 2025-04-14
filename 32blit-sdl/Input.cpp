@@ -44,10 +44,10 @@ std::map<int, int> Input::buttons = {
 	{SDL_CONTROLLER_BUTTON_DPAD_RIGHT,  blit::Button::DPAD_RIGHT},
 
 	// action buttons
-	{SDL_CONTROLLER_BUTTON_A,           blit::Button::A},
-	{SDL_CONTROLLER_BUTTON_B,           blit::Button::B},
-	{SDL_CONTROLLER_BUTTON_X,           blit::Button::X},
-	{SDL_CONTROLLER_BUTTON_Y,           blit::Button::Y},
+	{SDL_CONTROLLER_BUTTON_B,           blit::Button::A},
+	{SDL_CONTROLLER_BUTTON_A,           blit::Button::B},
+	{SDL_CONTROLLER_BUTTON_Y,           blit::Button::X},
+	{SDL_CONTROLLER_BUTTON_X,           blit::Button::Y},
 
 	// system buttons
 	{SDL_CONTROLLER_BUTTON_BACK,        blit::Button::HOME},
