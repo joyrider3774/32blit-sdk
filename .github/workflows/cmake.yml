@@ -123,7 +123,6 @@ jobs:
       if: runner.os == 'Linux'
       run: |
         sudo apt update && sudo apt install ${{matrix.apt-packages}}
-        pipx install 32blit
 
     # macOS deps
     - name: Install deps
@@ -132,7 +131,6 @@ jobs:
         ci/install_sdl_macos.sh
         brew install ccache
         echo "CCACHE_DIR=$HOME/.ccache" >> $GITHUB_ENV
-        python3 -m pip install --break-system-packages 32blit requests
 
     # Windows (VS) deps
     - name: Install deps
@@ -144,6 +142,16 @@ jobs:
     - name: MinGW deps
       if: matrix.name == 'MinGW'
       run: ci/install_sdl_mingw.sh
+
+    - name: Install Python Dependencies
+      if: runner.os != 'Windows'
+      shell: bash
+      run: |
+        python -m venv .venv
+        source .venv/bin/activate
+        python -m pip install 32blit requests
+        echo "$VIRTUAL_ENV/bin" >> $GITHUB_PATH
+        echo "VIRTUAL_ENV=$VIRTUAL_ENV" >> $GITHUB_ENV
 
     - name: Create Build Environment
       run: |
